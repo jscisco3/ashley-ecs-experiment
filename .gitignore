@@ -5,4 +5,5 @@ target/
 build/
 desktop/build/
 core/build/
+core/assets/save_game.json
 .gradle/

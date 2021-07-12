@@ -1,2 +1,0 @@
-com/jscisco/gdx/ecs/systems/MovementSystemTest.java
- com.jscisco.gdx.ecs.systems.MovementSystemTest

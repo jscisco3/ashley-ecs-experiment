@@ -1,11 +1,13 @@
 package com.jscisco.gdx.ecs.components;
 
-import com.badlogic.ashley.core.Component;
+import com.artemis.Component;
 import com.jscisco.gdx.Position;
 
-public class MovementComponent implements Component {
+public class MovementComponent extends Component {
 
-    private final Position position;
+    private Position position;
+
+    public MovementComponent() {}
 
     private MovementComponent(Position position) {
         this.position = position;
@@ -17,5 +19,9 @@ public class MovementComponent implements Component {
 
     public Position getPosition() {
         return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 }

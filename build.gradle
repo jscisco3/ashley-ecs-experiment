@@ -29,11 +29,10 @@ allprojects {
         gdxVersion = '1.9.14'
         roboVMVersion = '2.3.12'
         box2DLightsVersion = '1.5'
-        ashleyVersion = '1.7.4'
         aiVersion = '1.8.2'
         gdxControllersVersion = '2.1.0'
 
-
+        artemisVersion = '2.3.0'
         squidLibVersion = '3.0.3'
         slf4jVersion = '1.7.25'
         junitVersion = '5.3.2'
@@ -69,9 +68,9 @@ project(":core") {
     dependencies {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-        api "com.badlogicgames.ashley:ashley:$ashleyVersion"
         api "com.badlogicgames.gdx:gdx-ai:$aiVersion"
 
+        api "net.onedaybeard.artemis:artemis-odb:$artemisVersion"
 
         api "com.squidpony:squidlib-util:$squidLibVersion"
         api 'org.apache.commons:commons-lang3:3.12.0'

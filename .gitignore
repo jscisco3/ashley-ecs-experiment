@@ -2,6 +2,7 @@
 *.iml
 target/
 
+build/
 desktop/build/
 core/build/
 .gradle/

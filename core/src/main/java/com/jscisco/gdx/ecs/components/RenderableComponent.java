@@ -1,8 +1,10 @@
 package com.jscisco.gdx.ecs.components;
 
 import com.artemis.Component;
+import com.artemis.annotations.Transient;
 import com.badlogic.gdx.graphics.Texture;
 
+@Transient
 public class RenderableComponent extends Component {
 
     private Texture texture;

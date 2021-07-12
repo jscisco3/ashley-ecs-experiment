@@ -71,6 +71,8 @@ project(":core") {
         api "com.badlogicgames.gdx:gdx-ai:$aiVersion"
 
         api "net.onedaybeard.artemis:artemis-odb:$artemisVersion"
+        api "net.onedaybeard.artemis:artemis-odb-serializer-json:$artemisVersion"
+
 
         api "com.squidpony:squidlib-util:$squidLibVersion"
         api 'org.apache.commons:commons-lang3:3.12.0'

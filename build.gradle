@@ -33,7 +33,7 @@ allprojects {
         aiVersion = '1.8.2'
         gdxControllersVersion = '2.1.0'
 
-
+        artemisVersion = '2.3.0'
         squidLibVersion = '3.0.3'
         slf4jVersion = '1.7.25'
         junitVersion = '5.3.2'
@@ -72,6 +72,7 @@ project(":core") {
         api "com.badlogicgames.ashley:ashley:$ashleyVersion"
         api "com.badlogicgames.gdx:gdx-ai:$aiVersion"
 
+        api "net.onedaybeard.artemis:artemis-odb:$artemisVersion"
 
         api "com.squidpony:squidlib-util:$squidLibVersion"
         api 'org.apache.commons:commons-lang3:3.12.0'

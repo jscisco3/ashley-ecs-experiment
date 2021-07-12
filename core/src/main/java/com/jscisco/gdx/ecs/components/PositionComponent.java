@@ -1,10 +1,12 @@
 package com.jscisco.gdx.ecs.components;
 
-import com.badlogic.ashley.core.Component;
+import com.artemis.Component;
 import com.jscisco.gdx.Position;
 
-public class PositionComponent implements Component {
+public class PositionComponent extends Component {
     private Position position;
+
+    public PositionComponent() {}
 
     public static PositionComponent withPosition(Position p) {
         PositionComponent component = new PositionComponent();

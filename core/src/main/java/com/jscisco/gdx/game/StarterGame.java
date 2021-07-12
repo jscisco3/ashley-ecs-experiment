@@ -1,5 +1,8 @@
 package com.jscisco.gdx.game;
 
+import com.artemis.World;
+import com.artemis.WorldConfiguration;
+import com.artemis.WorldConfigurationBuilder;
 import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.gdx.ApplicationAdapter;
@@ -16,23 +19,24 @@ import com.jscisco.gdx.repositories.TextureRepository;
 
 public class StarterGame extends ApplicationAdapter {
 	SpriteBatch batch;
-	Engine engine;
+//	Engine engine;
+	World world;
 
 
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		engine = new Engine();
-
-		engine.addSystem(new MovementSystem());
-		engine.addSystem(new RenderingSystem(batch));
-
-		// Add a basic entity
+		WorldConfiguration config = new WorldConfigurationBuilder()
+				.with(
+						new MovementSystem(),
+						new RenderingSystem(batch)
+				).build();
+		world = new World(config);
+//		// Add a basic entity
 		for (int i = 0; i < 10; i++) {
-			Entity e = engine.createEntity();
-			e.add(PositionComponent.withPosition(Position.of(i, i)));
-			e.add(RenderableComponent.forTexture(TextureRepository.BAT));
-			engine.addEntity(e);
+			int e = world.create();
+			world.getMapper(PositionComponent.class).create(e).setPosition(Position.of(i, i));
+			world.getMapper(RenderableComponent.class).create(e).setTexture(TextureRepository.BAT);
 		}
 	}
 
@@ -43,7 +47,9 @@ public class StarterGame extends ApplicationAdapter {
 
 		// Process Systems Here
 		batch.begin();
-		engine.update(0.0f);
+		// TODO
+		world.setDelta(0.0f);
+		world.process();
 		batch.end();
 	}
 	

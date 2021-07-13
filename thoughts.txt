@@ -1,0 +1,13 @@
+Components I am considering and their uses
+    + Experience
+        - exp / exp to next level
+        - level
+    + Inventory
+        - items // list of entities with Item component
+    + Item
+        - weight
+        - value (base value?)
+    + Equipment
+        - equipment // map of equipped items
+    + Equippable
+        - slot // slot it is equipped to?

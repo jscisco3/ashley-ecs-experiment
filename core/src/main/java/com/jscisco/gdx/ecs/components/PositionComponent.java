@@ -21,4 +21,5 @@ public class PositionComponent extends Component {
     public void setPosition(Position position) {
         this.position = position;
     }
+
 }

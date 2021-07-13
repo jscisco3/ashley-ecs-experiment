@@ -7,7 +7,8 @@ public class Position {
     private int x;
     private int y;
 
-    public Position() {}
+    public Position() {
+    }
 
     private Position(int x, int y) {
         this.x = x;
@@ -32,6 +33,10 @@ public class Position {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public Position add(Position position) {
+        return of(this.x + position.x, this.y + position.y);
     }
 
     @Override
